@@ -20,19 +20,32 @@
     
     <main class="container mx-auto px-4">
         <div class="grid grid-cols-4 gap-6 mb-8">
+            
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
                 <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
                     Activos Totales
                     <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
-                <p class="text-3xl font-bold my-4">$44.500 millones USD</p>
-                <div class="mb-4 text-sm">
-                    <p><strong>Reservas de Oro:</strong> $4.000 millones USD</p>
-                    <p><strong>Reservas en Divisas:</strong> $25.500 millones USD</p>
-                    <p><strong>Derechos Especiales de Giro:</strong> $10.000 millones USD</p>
-                    <p><strong>Otros Activos:</strong> $5.000 millones USD</p>
+                <p class="text-4xl font-bold text-center my-4 text-green-600">$44.500 millones USD</p>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-green-600">$4.000</p>
+                        <p class="text-xs font-semibold">Reservas de Oro (millones USD)</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-green-600">$25.500</p>
+                        <p class="text-xs font-semibold">Reservas en Divisas (millones USD)</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-green-600">$10.000</p>
+                        <p class="text-xs font-semibold">Derechos Especiales de Giro (millones USD)</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-green-600">$5.000</p>
+                        <p class="text-xs font-semibold">Otros Activos (millones USD)</p>
+                    </div>
                 </div>
-                <p class="text-xs text-gray-500 mt-2">Fuente: Banco Central de la República Argentina (datos aproximados)</p>
+                <p class="text-xs text-gray-500 mt-4 text-center">Fuente: Banco Central de la República Argentina (datos aproximados)</p>
             </div>
             
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
@@ -40,17 +53,23 @@
                     Deuda Total
                     <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
-                <p class="text-3xl font-bold my-4">$377.000 millones USD</p>
-                <div class="mb-4 text-sm">
-                    <p><strong>Deuda en moneda extranjera:</strong> $215.000 millones USD</p>
-                    <p><strong>Deuda en moneda local:</strong> $162.000 millones USD</p>
+                <p class="text-4xl font-bold text-center my-4 text-red-600">$377.000 millones USD</p>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-red-600">$215.000</p>
+                        <p class="text-xs font-semibold">Deuda en moneda extranjera (millones USD)</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-red-600">$162.000</p>
+                        <p class="text-xs font-semibold">Deuda en moneda local (millones USD)</p>
+                    </div>
                 </div>
-                <p class="text-xs text-gray-500 mt-2">Fuente: Ministerio de Economía (datos aproximados)</p>
+                <p class="text-xs text-gray-500 mt-4 text-center">Fuente: Ministerio de Economía (datos aproximados)</p>
             </div>
             
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
                 <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
-                    Balance Fiscal y PBI
+                    Balance Fiscal
                     <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
                 <p class="text-3xl font-bold my-4">-2.9% del PBI</p>
@@ -69,7 +88,7 @@
                     Inflación Mensual
                     <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
-                <p class="text-5xl font-bold text-blue-600 my-8">8.4%</p>
+                <p class="text-5xl font-bold text-blue-600 my-8">4.2%</p>
                 <p class="text-xs text-gray-500">Fuente: INDEC</p>
             </div>
         </div>
@@ -130,6 +149,31 @@
             </h2>
             <p class="text-5xl font-bold text-center my-8" id="riesgoPais"></p>
             <p class="text-xs text-gray-500 text-center">Fuente: EMBI, elaborado por JP Morgan</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+            <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
+                Banco Central (BCRA)
+                <a href="#" class="text-sm text-blue-600">Ver detalle</a>
+            </h2>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-blue-600">29,705</p>
+                    <p class="text-xs font-semibold">Reservas (millones USD)</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-blue-600">47</p>
+                    <p class="text-xs font-semibold">Compra de divisas (millones USD)</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-blue-600">40.00%</p>
+                    <p class="text-xs font-semibold">TNA</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-blue-600">49.15%</p>
+                    <p class="text-xs font-semibold">TEA</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-4 text-center">Fecha: Lunes 24 de Junio de 2024</p>
         </div>
     </main>
 
