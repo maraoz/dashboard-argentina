@@ -62,18 +62,19 @@ new Chart(document.getElementById('inflacionChart'), {
 });
 
 // Indicadores socioeconómicos
+const poblacion = 46.23e6
 const indicadores = {
     pobreza: {
         porcentaje: 57.4,
-        absoluto: 25000000
+        absoluto: 57.4*poblacion/100
     },
     indigencia: {
         porcentaje: 17.5,
-        absoluto: 7800000
+        absoluto: 17.5*poblacion/100
     },
     desempleo: {
         porcentaje: 8,
-        absoluto: 1600000
+        absoluto: 8*poblacion/100
     },
     salarioMinimo: 195, // USD
     salarioPromedio: 500 // USD (estimado)
@@ -82,26 +83,26 @@ const indicadores = {
 document.getElementById('indicadoresData').innerHTML = `
     <div class="text-center">
         <p class="text-4xl font-bold text-blue-600">${indicadores.pobreza.porcentaje}%</p>
+        <p class="text-xl font-semibold">Pobreza</p>
         <p class="text-sm">${indicadores.pobreza.absoluto.toLocaleString()} personas</p>
-        <p class="text-xs font-semibold">Pobreza</p>
     </div>
     <div class="text-center">
         <p class="text-4xl font-bold text-blue-600">${indicadores.indigencia.porcentaje}%</p>
+        <p class="text-xl font-semibold">Indigencia</p>
         <p class="text-sm">${indicadores.indigencia.absoluto.toLocaleString()} personas</p>
-        <p class="text-xs font-semibold">Indigencia</p>
     </div>
     <div class="text-center">
         <p class="text-4xl font-bold text-blue-600">${indicadores.desempleo.porcentaje}%</p>
+        <p class="text-xl font-semibold">Desempleo</p>
         <p class="text-sm">${indicadores.desempleo.absoluto.toLocaleString()} personas</p>
-        <p class="text-xs font-semibold">Desempleo</p>
     </div>
     <div class="text-center col-span-3 mt-4">
         <p class="text-3xl font-bold text-blue-600">USD ${indicadores.salarioMinimo}</p>
-        <p class="text-xs font-semibold">Salario Mínimo</p>
+        <p class="text-xl font-semibold">Salario Mínimo</p>
     </div>
     <div class="text-center col-span-3 mt-2">
         <p class="text-3xl font-bold text-blue-600">USD ${indicadores.salarioPromedio}</p>
-        <p class="text-xs font-semibold">Salario Promedio (estimado)</p>
+        <p class="text-xl font-semibold">Salario Promedio (estimado)</p>
     </div>
 `;
 
