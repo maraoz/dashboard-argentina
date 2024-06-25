@@ -80,13 +80,30 @@ const indicadores = {
 };
 
 document.getElementById('indicadoresData').innerHTML = `
-    <p><strong>Pobreza:</strong> ${indicadores.pobreza.porcentaje}% (${indicadores.pobreza.absoluto.toLocaleString()} personas)</p>
-    <p><strong>Indigencia:</strong> ${indicadores.indigencia.porcentaje}% (${indicadores.indigencia.absoluto.toLocaleString()} personas)</p>
-    <p><strong>Desempleo:</strong> ${indicadores.desempleo.porcentaje}% (${indicadores.desempleo.absoluto.toLocaleString()} personas)</p>
-    <p><strong>Salario Mínimo:</strong> USD ${indicadores.salarioMinimo}</p>
-    <p><strong>Salario Promedio (estimado):</strong> USD ${indicadores.salarioPromedio}</p>
+    <div class="text-center">
+        <p class="text-4xl font-bold text-blue-600">${indicadores.pobreza.porcentaje}%</p>
+        <p class="text-sm">${indicadores.pobreza.absoluto.toLocaleString()} personas</p>
+        <p class="text-xs font-semibold">Pobreza</p>
+    </div>
+    <div class="text-center">
+        <p class="text-4xl font-bold text-blue-600">${indicadores.indigencia.porcentaje}%</p>
+        <p class="text-sm">${indicadores.indigencia.absoluto.toLocaleString()} personas</p>
+        <p class="text-xs font-semibold">Indigencia</p>
+    </div>
+    <div class="text-center">
+        <p class="text-4xl font-bold text-blue-600">${indicadores.desempleo.porcentaje}%</p>
+        <p class="text-sm">${indicadores.desempleo.absoluto.toLocaleString()} personas</p>
+        <p class="text-xs font-semibold">Desempleo</p>
+    </div>
+    <div class="text-center col-span-3 mt-4">
+        <p class="text-3xl font-bold text-blue-600">USD ${indicadores.salarioMinimo}</p>
+        <p class="text-xs font-semibold">Salario Mínimo</p>
+    </div>
+    <div class="text-center col-span-3 mt-2">
+        <p class="text-3xl font-bold text-blue-600">USD ${indicadores.salarioPromedio}</p>
+        <p class="text-xs font-semibold">Salario Promedio (estimado)</p>
+    </div>
 `;
-
 
 // Datos de exportaciones (en millones de USD)
 const exportaciones = {
@@ -145,3 +162,6 @@ new Chart(document.getElementById('importacionesChart'), {
         }
     }
 });
+
+// Riesgo País
+document.getElementById('riesgoPais').textContent = '1441';

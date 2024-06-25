@@ -20,7 +20,7 @@
     
     <main class="container mx-auto px-4">
         <div class="grid grid-cols-4 gap-6 mb-8">
-            <div style="min-height: 679px;" class="col-span-1 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
                 <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
                     Activos Totales
                     <a href="#" class="text-sm text-blue-600">Ver detalle</a>
@@ -35,7 +35,7 @@
                 <p class="text-xs text-gray-500 mt-2">Fuente: Banco Central de la República Argentina (datos aproximados)</p>
             </div>
             
-            <div class="col-span-1 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
                 <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
                     Deuda Total
                     <a href="#" class="text-sm text-blue-600">Ver detalle</a>
@@ -48,7 +48,7 @@
                 <p class="text-xs text-gray-500 mt-2">Fuente: Ministerio de Economía (datos aproximados)</p>
             </div>
             
-            <div class="col-span-1 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
                 <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
                     Balance Fiscal y PBI
                     <a href="#" class="text-sm text-blue-600">Ver detalle</a>
@@ -64,38 +64,30 @@
                 <p class="text-xs text-gray-500 mt-2">Fuente: Ministerio de Economía y Banco Mundial (datos aproximados)</p>
             </div>
 
-            <div class="col-span-1 row-span-2 grid grid-rows-2 gap-6">
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col items-center">
-                    <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 w-full flex justify-between items-center">
-                        Inflación Mensual
-                        <a href="#" class="text-sm text-blue-600">Mayo 2024</a>
-                    </h2>
-                    <p class="text-5xl font-bold text-blue-600 my-8">4.2%</p>
-                    <p class="text-xs text-gray-500">Fuente: INDEC (dato aproximado)</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
-                    <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
-                        Panel Adicional
-                        <a href="#" class="text-sm text-blue-600">Ver detalle</a>
-                    </h2>
-                    <p class="mt-4">Este panel está disponible para futura información o funcionalidades.</p>
-                </div>
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col items-center">
+                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 w-full flex justify-between items-center">
+                    Inflación Mensual
+                    <a href="#" class="text-sm text-blue-600">Ver detalle</a>
+                </h2>
+                <p class="text-5xl font-bold text-blue-600 my-8">8.4%</p>
+                <p class="text-xs text-gray-500">Fuente: INDEC</p>
             </div>
         </div>
 
         <div class="grid grid-cols-2 gap-6 mb-8">
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
-                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2">
+                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
                     Evolución del Dólar (Últimos 12 meses)
+                    <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
                 <div class="h-64 mt-4">
                     <canvas id="dolarChart"></canvas>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
-                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2">
+                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
                     Inflación Mensual (Últimos 18 meses)
+                    <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
                 <div class="h-64 mt-4">
                     <canvas id="inflacionChart"></canvas>
@@ -105,27 +97,39 @@
 
         <div class="grid grid-cols-3 gap-6 mb-8">
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
-                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2">
+                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
                     Indicadores Socioeconómicos
+                    <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
-                <div id="indicadoresData" class="mt-4"></div>
+                <div id="indicadoresData" class="mt-4 grid grid-cols-3 gap-4"></div>
             </div>
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
-                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2">
+                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
                     Exportaciones por Sector
+                    <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
                 <div class="h-64 mt-4">
                     <canvas id="exportacionesChart"></canvas>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
-                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2">
+                <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
                     Importaciones por Sector
+                    <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
                 <div class="h-64 mt-4">
                     <canvas id="importacionesChart"></canvas>
                 </div>
             </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+            <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
+                Riesgo País
+                <a href="#" class="text-sm text-blue-600">Ver detalle</a>
+            </h2>
+            <p class="text-5xl font-bold text-center my-8" id="riesgoPais"></p>
+            <p class="text-xs text-gray-500 text-center">Fuente: EMBI, elaborado por JP Morgan</p>
         </div>
     </main>
 
