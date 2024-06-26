@@ -84,17 +84,17 @@ const indicadores = {
 document.getElementById('population').innerHTML = poblacion.toLocaleString();
 document.getElementById('indicadoresData').innerHTML = `
     <div class="text-center">
-        <p class="text-4xl font-bold text-blue-600">${indicadores.pobreza.porcentaje}%</p>
+        <p class="text-4xl font-bold text-red-600">${indicadores.pobreza.porcentaje}%</p>
         <p class="text-xl font-semibold">Pobreza</p>
         <p class="text-sm">${indicadores.pobreza.absoluto.toLocaleString()} personas</p>
     </div>
     <div class="text-center">
-        <p class="text-4xl font-bold text-blue-600">${indicadores.indigencia.porcentaje}%</p>
+        <p class="text-4xl font-bold text-red-600">${indicadores.indigencia.porcentaje}%</p>
         <p class="text-xl font-semibold">Indigencia</p>
         <p class="text-sm">${indicadores.indigencia.absoluto.toLocaleString()} personas</p>
     </div>
     <div class="text-center">
-        <p class="text-4xl font-bold text-blue-600">${indicadores.desempleo.porcentaje}%</p>
+        <p class="text-4xl font-bold text-red-600">${indicadores.desempleo.porcentaje}%</p>
         <p class="text-xl font-semibold">Desempleo</p>
         <p class="text-sm">${indicadores.desempleo.absoluto.toLocaleString()} personas</p>
     </div>
