@@ -62,7 +62,8 @@ new Chart(document.getElementById('inflacionChart'), {
 });
 
 // Indicadores socioeconómicos
-const poblacion = 46.23e6
+const poblacion = 46054844 // https://www.worldometers.info/world-population/argentina-population/
+
 const indicadores = {
     pobreza: {
         porcentaje: 57.4,
@@ -80,6 +81,7 @@ const indicadores = {
     salarioPromedio: 500 // USD (estimado)
 };
 
+document.getElementById('population').innerHTML = poblacion.toLocaleString();
 document.getElementById('indicadoresData').innerHTML = `
     <div class="text-center">
         <p class="text-4xl font-bold text-blue-600">${indicadores.pobreza.porcentaje}%</p>
@@ -111,7 +113,7 @@ const tradeData = {
     labels: ['Exportaciones', 'Importaciones'],
     datasets: [{
         label: 'Millones USD',
-        data: [57000, 62000],
+        data: [7622, 4966],
         backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
         borderColor: ['rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
         borderWidth: 1
@@ -137,12 +139,16 @@ new Chart(document.getElementById('balanzaComercialChart'), {
 const tradeBalance = tradeData.datasets[0].data[0] - tradeData.datasets[0].data[1];
 const balanceElement = document.getElementById('balanzaComercialTotal');
 balanceElement.innerHTML = `
-    <p class="text-lg font-semibold">Balanza Comercial: 
-        <span class="${tradeBalance >= 0 ? "text-green-600" : "text-red-600"}">
-            ${tradeBalance >= 0 ? '+' : '-'}$${Math.abs(tradeBalance)} millones USD
-        </span>
+<div class="text-center">
+    <p class="text-4xl font-bold ${tradeBalance >= 0 ? "text-green-600" : "text-red-600"}">${tradeBalance >= 0 ? '+' : '-'}$${Math.abs(tradeBalance).toLocaleString()}</p>
+    <p class="text-xl font-semibold">Balanza Comercial Mensual</p>
+    <p class="text-sm">millones USD</p>
+    <p class="text-xs text-gray-500 mt-6 text-center">
+        Mayo 2024<br/>
+        Fuente: <a href="https://www.indec.gob.ar/indec/web/Nivel4-Tema-3-2-40">INDEC</a>
     </p>
-`;
+</div>
+`
 
 
 // Riesgo País

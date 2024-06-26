@@ -9,3 +9,9 @@ https://www.bcra.gob.ar/PublicacionesEstadisticas/Informe_monetario_mensual.asp
 
 ### Balanza comercial
 https://www.indec.gob.ar/indec/web/Nivel4-Tema-3-2-40
+
+### Riesgo País
+https://www.ambito.com/contenidos/riesgo-pais.html
+
+### Población
+https://www.worldometers.info/world-population/argentina-population/
