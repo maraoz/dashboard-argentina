@@ -135,20 +135,23 @@
             </div>
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
                 <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
-                    Exportaciones por Sector
+                    Balanza Comercial
                     <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
                 <div class="h-64 mt-4">
-                    <canvas id="exportacionesChart"></canvas>
+                    <canvas id="balanzaComercialChart"></canvas>
                 </div>
+                <div id="balanzaComercialTotal" class="mt-4 text-center"></div>
             </div>
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
                 <h2 class="text-xl font-semibold text-blue-600 border-b-2 border-yellow-400 pb-2 flex justify-between items-center">
-                    Importaciones por Sector
+                    Población Total
                     <a href="#" class="text-sm text-blue-600">Ver detalle</a>
                 </h2>
-                <div class="h-64 mt-4">
-                    <canvas id="importacionesChart"></canvas>
+                <div class="flex flex-col items-center justify-center h-full">
+                    <p class="text-5xl font-bold text-blue-600">46,230,000</p>
+                    <p class="text-xl mt-4">Habitantes (2022)</p>
+                    <p class="text-sm text-gray-500 mt-2">Fuente: World Bank</p>
                 </div>
             </div>
         </div>
@@ -189,6 +192,7 @@
                 <p class="text-xs text-gray-500 mt-4 text-center">Fecha: Lunes 24 de Junio de 2024</p>
             </div>
         </div>
+        
     </main>
 
     <footer class="bg-blue-600 text-white text-center py-4 mt-8">

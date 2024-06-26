@@ -106,24 +106,22 @@ document.getElementById('indicadoresData').innerHTML = `
     </div>
 `;
 
-// Datos de exportaciones (en millones de USD)
-const exportaciones = {
-    labels: ['Agro', 'Minería', 'Pesca', 'Vitivinícola', 'Ganadería', 'Energía', 'Otros'],
-    data: [33000, 3800, 2200, 800, 3500, 5000, 8700]
+// Updated trade balance data
+const tradeData = {
+    labels: ['Exportaciones', 'Importaciones'],
+    datasets: [{
+        label: 'Millones USD',
+        data: [57000, 62000],
+        backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
+        borderColor: ['rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
+        borderWidth: 1
+    }]
 };
 
-new Chart(document.getElementById('exportacionesChart'), {
+// Balanza Comercial chart
+new Chart(document.getElementById('balanzaComercialChart'), {
     type: 'bar',
-    data: {
-        labels: exportaciones.labels,
-        datasets: [{
-            label: 'Exportaciones (millones USD)',
-            data: exportaciones.data,
-            backgroundColor: 'rgba(75, 192, 192, 0.6)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
-        }]
-    },
+    data: tradeData,
     options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -135,34 +133,17 @@ new Chart(document.getElementById('exportacionesChart'), {
     }
 });
 
-// Datos de importaciones (en millones de USD)
-const importaciones = {
-    labels: ['Bienes de capital', 'Bienes intermedios', 'Combustibles', 'Piezas para bienes de capital', 'Bienes de consumo', 'Vehículos'],
-    data: [11000, 22000, 9000, 8000, 7000, 5000]
-};
+// Calculate and display trade balance
+const tradeBalance = tradeData.datasets[0].data[0] - tradeData.datasets[0].data[1];
+const balanceElement = document.getElementById('balanzaComercialTotal');
+balanceElement.innerHTML = `
+    <p class="text-lg font-semibold">Balanza Comercial: 
+        <span class="${tradeBalance >= 0 ? "text-green-600" : "text-red-600"}">
+            ${tradeBalance >= 0 ? '+' : '-'}$${Math.abs(tradeBalance)} millones USD
+        </span>
+    </p>
+`;
 
-new Chart(document.getElementById('importacionesChart'), {
-    type: 'bar',
-    data: {
-        labels: importaciones.labels,
-        datasets: [{
-            label: 'Importaciones (millones USD)',
-            data: importaciones.data,
-            backgroundColor: 'rgba(153, 102, 255, 0.6)',
-            borderColor: 'rgba(153, 102, 255, 1)',
-            borderWidth: 1
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
 
 // Riesgo País
 document.getElementById('riesgoPais').textContent = '1441';
